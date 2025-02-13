@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Online Compiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.40.0/min/vs/loader.js"></script>
+</head>
+<body>
+    <h1>Java Online Compiler</h1>
+    <div class="container">
+        <!-- Code Editor Section (Left) -->
+        <div class="left">
+            <div id="editor-container"></div>
+        </div>
+
+        <!-- Resizable Divider -->
+        <div id="resizer"></div>
+
+        <!-- Right Section (Input & Output) -->
+        <div class="right">
+            <div class="input-section">
+                <h2>Input</h2>
+                <textarea id="userInput" placeholder="Enter input..."></textarea>
+                <button onclick="runCode()">Run</button>
+            </div>
+            <div class="output-section">
+                <h2>Output</h2>
+                <pre id="output">Your output shows here...</pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
